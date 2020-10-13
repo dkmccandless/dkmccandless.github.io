@@ -22,7 +22,11 @@ But the basic structural unit of a sudoku puzzle is not the cell, and the basic 
 
 A cell, then, can be described as the intersection of one row and one column, and it contains nine candidates, each corresponding to a digit. Extending the pencil mark analogy with erasing all but one possible digit to determine the state of a cell, we may consider the instances of a particular digit in a particular row. Here too, there are nine mutually exclusive possibilities, one for each column. Likewise for all instances of a particular digit across any row in a particular column. In a sense, a sudoku puzzle is a 9×9×9 cube of these boolean candidate inferences, and solving the puzzle is the act of determining which 81 of them are true.
 
-Call a complete set of mutually exclusive candidates a _group_. "The 6s in the top row" is a group. "The 8s in the bottom right box" is too. So is "all of the digits in the 2nd column of the 5th row". Each group contains exactly nine candidates, and each candidate belongs to four groups: 
+Call a complete set of mutually exclusive candidates a _group_. "The 6s in the top row" is a group. "The 8s in the bottom right box" is too. So is "all of the digits in the 2nd column of the 5th row". Here is a grid with a few (non-intersecting) groups highlighted:
+
+![](/assets/sudoku-grid-groups.png)
+
+Each group contains exactly nine candidates, and each candidate belongs to four groups: 
 1. its cell
 2. the instances of its digit in its row
 3. the instances of its digit in its column
